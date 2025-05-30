@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <title>Data Analysis With AI</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#" class="logo">Simran Kaur</a>
+            <div class="nav-links">
+                <span class="item selected">Data Analysis With AI</span>
+            </div>
+            <div class="nav-buttons" id="navMenu">
+                <button class="nav-btn selected">28 Feb</button>
+            </div>
+
+            <button class="toggler">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+        <!-- End of Navbar -->
+
+        <!-- Top Container -->
+        <div class="top-container">
+            <div class="info-box">
+                <p class="header">The flow of the Project is the preprocessing of data with backend ML Model.</p>
+                <p class="info-text">
+                    AI is integrated with help of Ollama, running locally on a different server, the data generated is fed to AI for Further Insights.
+                </p>
+                
+            </div>
+            <div class="nft-box">
+                <img src="../static/images/img1.jpg" class="nft-pic">
+            </div>
+        </div>
+        <div class="container">
+            <h1 class="header-text">Feed Data To AI</h1>
+            <div class="info-buttons">
+                <button class="info-btn selected" onclick="chooseFile()">Choose File</button>
+                <!-- <button class="info-btn nav-btn" onclick="runModel()">Run Model</button> -->
+            </div>
+        
+            <input type="file" id="fileInput" accept=".csv" style="display: none;" onchange="uploadFile()">
+            
+            <pre id="output"></pre>
+            <div id="graphs"></div>
+            
+            <!-- Chat Box -->
+            <div id="chatButton" class="chat-button" onclick="toggleChat()">Chat with AI</div>
+            <div id="chatBox" class="chat-box" style="display: none;">
+                <h3>Chat with AI</h3>
+                <div id="chatOutput" class="chat-output"></div>
+                <input type="text" id="chatInput" placeholder="What do you want to know?" onkeypress="if(event.key === 'Enter') sendMessage()">
+                <!-- Close Button for Chat -->
+                <button class="close-chat" onclick="closeChatBox()">Close Chat</button>
+            </div>
+        </div>
+        <!-- End of Top Container -->
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-header">
+                I Will OpenSource The Code, After This Day Ends
+            </div>
+            <div class="footer-links">
+                <div class="link">
+                    <h5>Dataset</h5>
+                    <p>kaggle</p>
+                    <p>Google</p>
+                </div>
+                <div class="link">
+                    <h5>Deep Learning</h5>
+                    <p>LSTM</p>
+                    <p>ANN</p>
+                    <p>Hybrid Model</p>
+                </div>
+                <div class="link">
+                    <h5>AI Integration</h5>
+                    <p>Ollama</p>
+                    <p>Model llama3.1</p>
+                    <p>Flask</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Footer -->
+        <div class="copyright">
+            <p>Developed Purely for this day</p>
+        </div>
+    </div>
+
+    <!-- loader -->
+
+    <div id="loader-overlay">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>      
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
